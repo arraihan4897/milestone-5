@@ -59,15 +59,48 @@
 
 
     <section class="sec">
+        <p id="comnt-container">
+            about Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore officiis doloremque dolorum, rerum, voluptatum autem iusto nemo atque libero harum inventore! Illo, animi hic labore eaque saepe maiores perspiciatis distinctio.
+        </p>
         <h1>
             Add a Comment
         </h1>
             <div>
-                <input type="text">
-                <button>submit</button>
+                <textarea name="" id="cmntbx"placeholder='     add a comment here ' cols="50" rows="5"></textarea>
+               
+              
+                <button id="btn-post">Post</button>
                 <button>reset</button>
             </div>
     </section>
+
+
+    <script>
+        // step 1 => add event listener to the post button 
+
+        document.getElementById('btn-post').addEventListener('click', ()=>{
+            //   step 2 => get the comment from the inpuut field 
+        
+            const commentbox= document.getElementById('cmntbx');
+            const newcmt= commentbox.value ;
+        //    step-3 set the comment inside the paragraph
+                    // substep: 1 - get the comment container
+                    // substep: 2 - cretae a new element 
+                    // substep:3 - ste the txt 
+                    // substep:4 - add the  text of the comment as a inner text of the p tag 
+                    // substep:5 - add the p tag using append child 
+        const commentContainer = document.getElementById('comnt-container');
+        const p = document.createElement('p');
+        p.innerText=newcmt;;
+        commentContainer.appendChild(p);
+
+        // step 4 - cleaR THE  text area 
+        commentbox. value = "";
+
+
+
+        })
+    </script>
 
     
 </body>

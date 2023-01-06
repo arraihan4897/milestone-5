@@ -10,6 +10,9 @@ tr , td{
     padding: 5PX;
      border: 2PX solid green;
 }
+input{
+ height: 100px;
+}
 .sec{
     text-align: center;
 }
