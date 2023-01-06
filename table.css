@@ -1,0 +1,15 @@
+body{
+   
+}
+table{
+align-content: center;
+    border-collapse: collapse;
+    text-align: left;
+}
+tr , td{
+    padding: 5PX;
+     border: 2PX solid green;
+}
+.sec{
+    text-align: center;
+}
